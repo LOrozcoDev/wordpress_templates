@@ -1,0 +1,522 @@
+#content-wrapp
+	.scrollreveal
+		opacity: 0
+	.animated
+		opacity: 1
+	.section-row
+		position: relative
+		h2
+			text-transform: uppercase
+			text-align: center
+			font-size: 3.5em
+			font-family: $fface_1
+			color: $blanco
+			margin-bottom: 50px
+		h3
+			text-align: center
+			text-transform: uppercase
+			color: $blanco
+			margin-top: -40px
+			font-size: 1.2em
+	.ascending
+		+transform(skew(0,-1.5deg))
+		&:before
+			+transform(skew(0,1.5deg))
+	.descending
+		+transform(skew(0,1.5deg))
+		&:before
+			+transform(skew(0,-1.5deg))
+	.bkg-effect
+		position: absolute
+		top: -10%
+		left: 0
+		bottom: 7%
+		z-index: 0
+		width: 100%
+		overflow: hidden
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: -15%
+			width: 100%
+	.city
+		&:before
+			background: url('img/Fondo1.png') top center no-repeat
+			background-position: 0 -20px
+	.lightbulb
+		&:before
+			top: -15%
+			background: url('img/Fondo2_promo.png') top center no-repeat
+			background-size: cover
+	.people
+		&:before
+			top: -15%
+			background: url('img/fondo4_tickets.png') top center no-repeat
+	.mike
+		&:before
+			top: 0
+			background: url('img/Fondo_Mike_solo.jpg') top left $naranja no-repeat
+	#intro-wrpp
+		z-index: 1
+		#intro
+			max-width: 80%
+			margin: 100px auto 100px 
+	#countdown
+		max-width: 700px
+		margin: 0 auto 
+		+bk_lgradient2c(to right, $naranja, $rosa)
+		padding: 10px 0
+		position: relative
+		z-index: 9
+		.time
+			font-family: $fface_4
+		.label
+			font-family: $fface_4
+	#oferta-wrpp
+		.text-block
+			padding: 20px 0
+			text-align: center
+			> span
+				display: block
+				text-transform: uppercase
+			.medium-text
+				font-size: 2.5em
+			.big-text
+				font-size: 4.5em
+				font-family: $fface_1
+				color: $blanco
+				text-shadow: 0 0 5px rgba($negro,.2)
+				line-height: 1
+			.small-text
+				font-size: 1.5em
+				font-family: $fface_6
+				color: $blanco
+				line-height: 1.2
+			.colored
+				span
+					padding: 5px
+					color: $negro
+					background: $c_texto
+					font-family: $fface_1
+					display: inline-block
+					line-height: 1
+					margin-top: 20px
+			.oferta
+				font-family: $fface_4
+				color: $blanco
+				> span
+					display: inline-block
+				.numero-oferta
+					font-size: 12em
+					line-height: 1
+				.complement-oferta
+					display: inline-block
+					> div
+						display: block
+						line-height: 1
+						text-shadow: 0 0 5px rgba($negro,.2)
+						&:first-child
+							font-size: 6.7em
+						&:last-child
+							font-size: 3em
+			.separador
+				margin-bottom: 100px
+	#brochure-wrpp
+		background: $negro
+		position: relative
+		&:before
+			content: " "
+			position: absolute
+			width: 100%
+			height: 100%
+			background: $negro
+			+transform(skew(0,1.5deg))
+			top: -25%
+		&:after
+			content: " "
+			position: absolute
+			width: 100%
+			height: 100%
+			background: $negro
+			+transform(skew(0,-1.5deg))
+			bottom: -10%
+			z-index: -1
+		.brochure-wrpp
+			padding: 50px 0
+		.variable-words
+			color: $blanco
+			text-transform: uppercase
+			text-align: center
+			line-height: 1
+			margin: -50px 0 0
+			.w-100
+				margin-bottom: -15px
+			span
+				&:first-child
+					font-family: $fface_1
+					display: block
+					font-size: 3.5em
+				&:nth-child(2)
+					font-family: $fface_1
+					font-size: 4em
+					vertical-align: top
+					margin-right: 15px
+					display: inline-block
+				&:nth-child(3)
+					font-family: $fface_4
+					font-size: 5em
+				&:nth-child(5)
+					font-family: $fface_4
+					font-size: 2.5em
+					display: inline-block
+					margin: 0 50px 0 -100px
+				&:nth-child(6)
+					font-family: $fface_1
+					font-size: 2em
+					display: inline-block
+					margin: 0 -80px 0 0
+		.btn-brochure
+			text-align: center
+			a
+				border-radius: 0
+				border: 1px solid $blanco
+				color: $c_texto
+				font-family: $fface_4
+				margin-top: 30px
+				text-transform: uppercase
+				+transition(.50s)
+				&:hover
+					background: $c_texto
+					border-color: $c_texto
+					color: $blanco
+	#tickets-wrpp
+		margin-top: 70px
+		h2
+			text-transform: uppercase
+			text-align: center
+			font-size: 3.5em
+			font-family: $fface_1
+			color: $blanco
+			margin-bottom: 50px
+		.ticket-col
+			margin-bottom: 150px
+			.violet
+				.ribon-title
+					background: linear-gradient(to right, #1b1138, #b21e8d 60%, #510e41 75%)
+				.description
+					&:before
+						background: linear-gradient(to right, #1b1138, #b21e8d 60%, #510e41 75%)
+					ul
+						li
+							&:before
+								background: linear-gradient(to right, #1b1138, #b21e8d 60%, #510e41 75%)
+			.orange
+				.ribon-title
+					+bk_lgradient2c(to right, $c_domina, $rosa)
+				.description
+					&:before
+						+bk_lgradient2c(to right, $c_domina, $rosa)
+					ul
+						li
+							&:before
+								+bk_lgradient2c(to right, $c_domina, $rosa)
+			.black
+				.ribon-title
+					+bk_lgradient2c(to right, #333333, $negro)
+				.description
+					&:before
+						+bk_lgradient2c(to right, #333333, $negro)
+					ul
+						li
+							&:before
+								+bk_lgradient2c(to right, #333333, $negro)
+			.ticket-frame
+				background: $blanco
+				border-radius: 25px
+				padding: 3px
+				position: relative
+				overflow: hidden
+				height: 100%
+				.ribon-title
+					padding: 10px 0
+					text-align: center
+					font-family: $fface_3
+					border-radius: 25px 25px 0 0
+					h3
+						color: $blanco
+						margin: 0
+						line-height: 1
+						font-size: 3em
+				.price-block
+					width: 60%
+					margin: 0 auto 0
+					text-align: center
+					.reduced
+						&:before
+							content: ""
+							position: absolute
+							top: 50%
+							left: 30%
+							width: 50%
+							height: 2px
+							background: $naranja
+							+transform(rotate(-25deg) translate(-.5%,-20%))
+					.top-price
+						margin: 20px 0 0
+						position: relative
+						span
+							display: block
+							line-height: 1
+							font-family: $fface_6
+							&:first-child
+								font-size: 1.7em
+							&:last-child
+								font-size: .9em
+					.bottom-price
+						margin: 10px 0 20px
+						position: relative
+						span
+							display: block
+							line-height: 1
+							font-family: $fface_4
+							&:first-child
+								font-size: 2.5em
+							&:last-child
+								font-size: 1.2em
+				.description
+					width: 60%
+					margin: 0 auto 0
+					position: relative
+					&:before
+						content: " Incluye "
+						width: 80%
+						text-align: center
+						padding: 0 50px
+						text-transform: uppercase
+						color: $blanco
+						font-size: .8em
+					ul
+						+ulst
+						margin-bottom: 20px
+						li
+							position: relative
+							&:before
+								content: ""
+								position: absolute
+								width: 15px
+								height: 15px
+								border-radius: 50%
+								top: 50%
+								left: -20px
+								+transform(translate(0,-50%))
+					.tiny-msg
+						display: block
+						font-size: .5em
+						margin-bottom: 20px
+	#speakers-wrpp
+		position: relative
+		margin-top: -80px
+		z-index: -1
+		background: radial-gradient(circle, rgba(110,32,128,1) 0%, rgba(0,0,0,1) 100%)
+		> div
+			padding: 100px 0
+		.speakers_list
+			font-size: 1.2em
+			text-align: left
+			max-width: 60%
+			margin: 0 auto
+			+ulst
+			li
+				margin-bottom: 10px
+			.green_text
+				color: $c_detalle
+				font-family: $fface_3
+				text-transform: uppercase
+				position: relative
+			.white_dec
+				color: $blanco
+				font-family: $fface_8
+				position: relative
+				&:before
+					content: "/"
+					margin: 0 5px 0
+			.job
+				text-transform: uppercase
+				&:before
+					content: "\f111"
+					font-family: $fuente-iconos
+					margin: 0 5px 0
+			.tiny-text
+				display: block
+				font-size: .5em
+	#orange-wrpp
+		background: $naranja
+		.speaker-content
+			padding: 0 70px
+			position: relative
+			.spc-wrpp
+				position: absolute
+				top: 50%
+				left: 20%
+				+transform(translate(0,-50%))
+				h1
+					font-size: 5.5em
+					line-height: 1
+					color: $blanco
+					span
+						display: block
+						font-family: $fface_1
+						text-transform: uppercase
+				.topic
+					span
+						display: block
+						&:first-child
+							font-family: $fface_6
+							text-transform: uppercase
+							font-size: 1.4em
+					.colored
+						padding: 5px 10px
+						color: $naranja
+						background: $blanco
+						text-transform: uppercase
+						display: inline-block
+						line-height: 1
+						font-size: 1.6em
+				.coming-soon
+					color: $blanco
+					margin-top: 30px
+	#hotels-wrpp
+		+bk_lgradient2c(90deg, #0875ae, $c_texto)
+		padding: 70px 0
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			width: 100%
+			height: 100%
+			+bk_lgradient2c(90deg, #0875ae, $c_texto)
+			+transform(skew(0,1.5deg))
+			z-index: 0
+			top: -2%
+		&:after
+			content: ""
+			position: absolute
+			width: 100%
+			height: 100%
+			+bk_lgradient2c(90deg, #0875ae, $c_texto)
+			+transform(skew(0,1.5deg))
+			z-index: 0
+			bottom: -2%
+		> div 
+			z-index: 1
+		img
+			display: inline-block
+		.hotel-block
+			text-align: center
+		.blue-line
+			position: relative
+			padding-top: 30px
+			padding-bottom: 30px
+			&:before
+				content: ""
+				position: absolute
+				height: 3px
+				width: 100%
+				background:  radial-gradient(circle, #08ffff 0%, transparent 100%)
+				top: 0
+			&:after
+				content: ""
+				position: absolute
+				height: 3px
+				width: 100%
+				background: radial-gradient(circle, #08ffff 0%, transparent 100%)
+				bottom: 0
+	#sponsors-wrpp
+		padding: 100px 0 
+		background: $negro
+		position: relative
+		z-index: -1
+		.sponsor-block
+			text-align: center
+			img
+				display: inline-block
+	#contact-wrpp
+		padding: 150px 0 100px
+		background: linear-gradient(to right, #008ba9,#5e6a18)
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			width: 100%
+			height: 100%
+			+bk_lgradient2c(to bottom, transparent, rgba($negro,.7))
+			top: 0
+			left: 0
+		.title-contact
+			font-family: $fface_1
+			text-transform: uppercase
+			font-size: 2em
+			h3
+				text-align: left
+		form
+			label
+				color: $blanco
+				font-family: $fface_6
+		.contact-info-wrrp
+			position: relative
+			margin-bottom: 30px
+			span
+				display: block
+				color: $blanco
+			.contact-info-title
+				display: inline-block
+				text-transform: uppercase
+				color: $blanco
+				+bk_lgradient2c(to right, $c_domina, $rosa)
+				padding: 0 5px
+		.rrss-contact
+			span
+				display: inline-block
+				&:first-child
+					padding: 10px
+					position: relative
+					border-radius: 50%
+					background: $blanco
+					color: $negro
+					margin: 3px 0 -3px
+					> i
+						position: absolute
+						top: 60%
+						left: 50%
+						+transform(translate(-50%,-50%))
+						font-size: 1em
+						background: linear-gradient(to right, #008ba9,#5e6a18)
+						background-clip: text
+						text-fill-color: transparent
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+						-moz-background-clip: text
+						-moz-text-fill-color: transparent
+						-o-background-clip: text
+						-o-text-fill-color: transparent
+						-ms-background-clip: text
+						-ms-text-fill-color: transparent
+				&:nth-child(2)
+					font-size: 1.2em
+					margin-left: 5px
+		.send-msg
+			+bk_lgradient2c(to right, $c_domina, $rosa)
+			color: $blanco
+			text-transform: uppercase
+			font-family: $fface_6
+		.bottom-logo
+			text-align: center
+			margin-bottom: 100px
+			img
+				display: inline-block
+		.copyright
+			text-align: center
+			span
+				color: $blanco
+				display: inline-block

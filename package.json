@@ -1,0 +1,16 @@
+{
+  "name": "templates_reader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "generate": "php generator/get_dir.php",
+    "deploy": "npm run generate && gh-pages -d public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
