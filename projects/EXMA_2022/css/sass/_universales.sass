@@ -1,0 +1,114 @@
+html
+	margin: 0
+	padding: 0
+	height: 100%
+body
+	@extend html
+	font-family: $fuente_pagina
+	//background: $c_domina
+	//font-size: 14px
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+		border-radius: 10px
+		background-color: $blanco
+	&::-webkit-scrollbar
+		width: 11px
+		background-color: $blanco
+	&::-webkit-scrollbar-thumb
+		border-radius: 10px
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+		background-color: rgba(#ccc, .5)
+a
+	text-decoration: none
+	outline: none !important
+	-moz-outline-style: none !important
+	+transition(.25s)
+*
+	padding: 0 
+	margin: 0
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+*:before
+	@extend *
+*:after
+	@extend *
+a:hover
+	@extend a
+a:active
+	@extend a
+a:visited
+	@extend a
+a:focus
+	@extend a
+p
+	margin: 0
+	font-family: $fuente_pagina
+img
+	max-width: 100%
+	height: auto
+	display: block
+form
+	margin: 30px 0
+	.form-control
+		&:focus
+			border-color: $c_debil
+			outline-color: $c_debil
+			box-shadow: 0 0 0 0.2rem rgba($c_debil,.25)
+#body-wrapp
+	width: 100%
+	height: 100%
+	position: relative
+	background: $c_domina
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+		border-radius: 10px
+		background-color: rgba($blanco, .3)
+	&::-webkit-scrollbar
+		width: 11px
+		background-color: rgba($blanco, .3)
+	&::-webkit-scrollbar-thumb
+		border-radius: 10px
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+		background-color: rgba($c_domina, .5)
+#body-wrapp.inner_style
+	background: $blanco
+.compensa
+	margin-bottom: 2.3rem
+.universalframe
+	max-width: 1200px
+	margin: 0 auto 0
+.mid-frame
+	max-width: 900px
+	margin: 0 auto 0
+.clearp
+	padding: 0
+.clearm
+	margin: 0
+.clearboth
+	margin: 0
+	padding: 0
+.resalt
+	color: $rojo
+	font-weight: 700
+.wrpp
+	margin: 0
+	padding: 0
+.bgg-up
+	+bk_lgradient2c(to bottom, $blanco, $gris)
+.bgg-dwn
+	+bk_lgradient2c(to bottom, $gris, $blanco)
+
+.full-height
+	height: 100%
+.parent-post
+	position: relative
+.child-post
+	position: absolute
+.bold
+	font-weight: 700
+.thin
+	font-weight: 100
+.vrfy
+	height: 0
+	opacity: 0

@@ -1,0 +1,332 @@
+#movil-trigg
+	position: fixed
+	top: -9999px
+	right: -9999px
+.nav-container
+	text-align: center
+	padding: 0
+	display: block
+	width: 100%
+	position: relative
+	z-index: 999
+	ul
+		li
+			a
+				font-family: $fuente_menu
+	&>label
+		display: none
+	&>ul
+		list-style: none
+		line-height: 1.8
+		margin: 0
+		padding: 0
+		position: relative
+		z-index: 9999
+		display: inline-block
+		+transform(translate(0,52%))
+		&>li
+			display: inline-block
+			position: relative
+			padding: 0 5px
+			&>a
+				color: $blanco
+			ul
+				//inicia sub-menu
+				list-style: none
+				background: $blanco
+				margin: 0
+				padding: 10px
+				visibility: hidden
+				opacity: 0
+				filter: alpha(opacity=0)
+				position: absolute
+				left: 13px
+				min-width: 200px
+				box-shadow: 0px 0px 8px 0.2px rgba($negro, .3)
+				border-radius: 5px
+				*
+					text-align: left
+				li
+					padding: 0
+					&:not(:last-child)
+						border-bottom: 1px solid $gris
+				a
+					color: $blanco
+					display: block
+					font-size: 12px
+					font-weight: 600
+					padding: 5px
+					position: relative
+
+
+			&:hover
+				> a
+					color: $rosa
+					&:after
+						color: $rosa
+					&:before
+						color: $rosa
+
+				> ul
+					z-index: 9999
+					visibility: visible
+					opacity: 1
+					filter: alpha(opacity=100)
+
+.nav-container > ul 
+	> li 
+		> a
+			color: $blanco
+			display: block
+			font-size: $size_menu
+			font-weight: 400
+			text-transform: uppercase
+			padding: 0 10px
+			position: relative
+			+transition(.50s)
+			
+			
+	> li.current-menu-item
+		> a
+			&:before
+				content: "\f078 "
+				font-family: $fuente-iconos
+				position: absolute
+				top: -10px
+				left: 50%
+				+transform(translate(-50%,0))
+				+transition(.50s)
+				font-size: 11px
+	> li.menu-item-has-children
+		> a
+			&:after
+				content: "\f077 "
+				font-family: $fuente-iconos
+				position: absolute
+				left: 93%
+				top: 50%
+				+transition(.50s)
+				+transform(translate(0,-50%) rotate(0))
+				font-size: 11px
+		&:hover
+			a
+				&:after
+					+transform(translate(0,-50%) rotate(180deg))
+
+// sub-menu a partir del segundo nivel
+.nav-container > ul > li ul
+	li
+		&:hover
+			> ul
+				z-index: 9999
+				visibility: visible
+				opacity: 1
+				filter: alpha(opacity=100)
+				&:before
+					content: " "
+					position: absolute
+					left: -8px
+					top: 17px
+					width: 0
+					height: 0
+					border-top: 8px solid transparent
+					border-bottom: 8px solid transparent
+					border-right: 8px solid rgba($rojo, .8)
+			> a
+				background: $rojo
+				color: $blanco
+	ul
+		visibility: hidden
+		opacity: 0
+		filter: alpha(opacity=0)
+		left: calc(100% + 15px)
+		margin-top:  -45px !important
+#menu-sw
+	display: none
+	color: $blanco
+	padding: 30px 10px
+	margin: 0
+	position: relative
+	left: 60%
+.hamb
+	cursor: pointer
+	border-radius: 1px
+	height: 3px
+	width: 30px
+	+bk_lgradient2c(to right, $c_domina, $rosa)
+	position: absolute
+	display: block
+	left: calc(50% - 15px)
+	content: ''
+	+transform(rotate(0deg))
+	&:before
+		@extend .hamb
+		top: -7px
+	&:after
+		@extend .hamb
+		bottom: -7px
+.times
+	display: none
+	opacity: .7
+	color: $blanco
+	position: absolute
+	height: 50px
+	width: 50px
+	line-height: 40px
+	font-size: 26px
+	border: 2px solid $blanco
+	border-radius: 50%
+	right: 10px
+	top: 10px
+	z-index: 9999
+	text-align: center
+	&:hover
+		opacity: 1
+// Site map
+.site-map
+	+ulst
+	font-size: 15px
+	> ul
+		> li
+			+list
+			position: relative
+			vertical-align: top
+			&:not(:last-child)
+				margin-right: 10px
+			a
+				color: $rojo
+				font-weight: 600
+			ul
+				padding: 20px 0 0
+				> li
+					display: block
+
++mediaqueriesmw(screen, 1050px)
+	#header-wrapp
+		.nav-container
+			>ul
+				>li
+					&:not(:last-child)
+						margin: 0
++mediaqueriesmw(screen, 900px)		
+	#header-wrapp
+		*
+			+transition(.25s)
+		.trigger-mov
+			text-align: right
+		#menu-sw
+			display: inline-block
+		.nav-container
+			> ul
+				> li
+					padding: 0 5px
+				> li.menu-item-has-children
+					> a:after
+						left: 90%
+						font-size: 14px
+		.navigate-frame
+			position: fixed
+			top: 0
+			bottom: 0
+			right: -100%
+			display: block
+			width: 40%
+			+bk_lgradient2c(to bottom, $negro_1, $negro_2)
+			z-index: 9999
+			.nav-container
+				text-align: center
+				*
+					+transition(.50s)
+				> ul
+					position: relative
+					display: block
+					padding: 10px
+					li
+						display: block
+						padding: 8px 0
+						text-align: center
+						ul
+							width: 100%
+							margin: 10px 0
+							ul
+								left: 0
+								margin-top: 20px !important
+						&:hover
+							> a
+								&:after
+									+transform(translate(0,-25%) rotate(0deg))
+							> ul
+								position: relative
+								display: none
+					> li
+						&:hover
+							> a
+								color: $rojo
+								&:after
+									+transform(translate(0,-50%) rotate(0deg))
+									color: $rojo
+					li.current-item
+						//border: 2px solid $gris_o
+						box-shadow: 0 0 5px 5px rgba($rojo, .4)
+					> li.movmenu-active
+						> a
+							box-shadow: 0 0 5px 5px rgba($rojo, .4)
+							color: $rojo
+							&:after
+								+transform(translate(0,-50%) rotate(180deg))
+								color: $rojo
+					li.movmenu-active
+						> ul
+							display: block
+							z-index: 9999
+						ul
+							li
+								&:hover
+									> ul
+										&:before
+											top: -17px
+											left: calc(50% - 4px)
+											border-top: 8px solid transparent
+											border-right: 8px solid transparent
+											border-left: 8px solid transparent
+											border-bottom: 8px solid rgba($rojo, .8)
+
+		#movil-trigg
+			&:checked
+				~ .navigate-frame
+					right: 0
+					.times
+						display: block
+	#contact-on
+		.nav-container
+			> ul
+				li
+					a
+						color: $blanco
+	.site-map
+		> ul
+			> li
+				&:not(:last-child)
+					margin-right: 10px
++mediaqueriesmw(screen, 500px)
+	#header-wrapp
+		.navigate-frame
+			width: 70%
+//Offset Menu Type
+#body-wrapp
+	#full-navigate
+		position: fixed
+		width: 100%
+		height: 100%
+		z-index: -300
+		left: 0
+		top: 0
+		background: $negro
+		opacity: 0
+		+transition(.50s)
+	#movil-trigg
+		&:checked
+			+ #full-navigate
+				z-index: 9999
+				opacity: 1
+							

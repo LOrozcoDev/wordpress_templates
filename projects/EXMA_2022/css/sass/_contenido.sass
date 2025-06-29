@@ -1,0 +1,776 @@
+#content-wrapp
+	overflow: hidden
+	.scrollreveal
+		opacity: 0
+		+transition(.50s)
+	.animated
+		opacity: 1
+	.section-row
+		position: relative
+	.whatts-btn
+		display: inline-block
+		padding: 15px 15px 15px 50px
+		position: relative
+		color: $blanco
+		font-family: $fuente_bold
+		+bk_lgradient2c(to right,#5cd467,#26b33d)
+		border-radius: 50px
+		position: relative
+		line-height: 1
+		&:before
+			content: "\f232 "
+			font-family: $fuente-iconos
+			font-size: 2rem
+			color: $blanco
+			position: absolute
+			left: 15px
+			top: 50%
+			+transform(translate(0,-50%))
+	.inner_frame
+		min-height: 100vh
+	#intro-wrapp
+		background: url('img/bkg_intro_web.jpg') top center no-repeat
+		background-size: cover
+		margin: -110px 0 10px
+		padding: 0 0 150px
+		.intro-row
+			> div
+				&:first-child
+					padding-left: 140px
+					position: relative
+					>img
+						margin: 50% 0 30px
+					.date-event
+						margin-bottom: 20px
+						span
+							display: block
+							font-family: $fuente_menu
+							line-height: 1
+							color: $blanco
+							font-size: 1rem
+							&:not(:last-child)
+								font-family: $fuente_detalles
+							&:last-child
+								margin-top: -10px
+						.month
+							font-size: 3rem
+						.dates
+							font-size: 4rem
+							color: $c_titulos !important
+					.address_event
+						@extend .date-event
+						margin-top: -10px
+						span
+							&:not(:last-child)
+								font-family: $fuente_menu
+							&:last-child
+								margin-top: 0
+
+	#price-tickets
+		position: relative
+		z-index: 2
+		.price-tickets
+			box-shadow: 0px 0px 25px 6px rgba(33,33,255,1)
+			width: 40%
+			margin: -20px auto 0
+			padding: 3px
+			background: $blanco
+			border-radius: 30px
+			z-index: 9999
+			.price-middle
+				box-shadow: inset 0px 0px 7px 6px  rgba(33,33,255,1)
+				padding: 10px
+				border-radius: 30px
+				background: $c_domina
+				.price-inner
+					background: #1d0f55
+					border-radius: 10px
+					box-shadow: inset 2px 1px 3px rgba(255,255,255,.2), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1)
+					+bk_lgradient2c(to top right,#00003f,#180c51)
+					display: flex
+					flex-wrap: wrap
+					position: relative
+					padding: 15px 0
+					.small
+						position: absolute
+						left: 50%
+						top: 75%
+						font-family: $fuente_bold
+						+transform(translate(-50%,0))
+						color: $blanco
+					> div
+						&:not(.small)
+							position: relative
+							display: flex
+							flex: 1
+							&:not(:nth-child(2))
+								font-family: $fuente_bold
+								span
+									display: block
+									position: absolute
+									width: 100%
+									font-size: 13px
+									top: 50%
+									left: 50%
+									+transform(translate(-50%,-50%))
+									line-height: 1
+									margin-left: 10px
+									color: $blanco
+							&:nth-child(2)
+								font-family: $fuente_detalles
+								color: $c_detalle
+								> span
+									&:first-child
+										font-size: 4rem
+										line-height: 1
+									&:last-child
+										line-height: 1
+										position: absolute
+										left: 70%
+										top: 50%
+										font-size: 1.2em
+										+transform(translate(0,-50%))
+										&:before
+											content: "*"
+											position: absolute
+											top: 0
+											left: 50%
+	#encounter
+		background: url('img/bkg_encuentro_web.jpg') top center no-repeat $c_domina
+		background-size: cover
+		padding: 20%
+		margin-top: -150px
+		position: relative
+		.ecounter-col
+			.ecounter-inner
+				margin-top: 50px
+				> span
+					display: block
+					line-height: 1.2
+					font-family: $fuente_menu
+					color: $blanco
+					font-size: 1.5rem
+					> span
+						color: #00bee7
+						font-family: $fuente_bold
+			h1
+				font-family: $fuente_detalles
+				color: $blanco
+				line-height: 1
+				font-size: 2.5rem
+				margin-top: 20px
+	#metaverso
+		background: $negro
+		padding: 10% 0
+		height: 100vh
+		position: relative
+		&:after
+			content: ""
+			background: url('img/bkg_metaverso_web_2.png') bottom right no-repeat
+			background-size: contain
+			background-position: 120% 0
+			position: absolute
+			width: 100%
+			height: 100%
+			top: -15%
+		.metaverso_col
+			p
+				line-height: 1.2
+				font-family: $fuente_regular
+				color: $blanco
+				font-size: 1.4rem
+			.h1
+				font-family: $fuente_detalles
+				color: $c_titulos
+				display: block
+				line-height: 1
+				margin: 0
+				font-size: 3.5rem
+
+			.metaverso_fisico
+				color: #020b15
+				text-shadow: $c_titulos 1px 0px 0px, $c_titulos 0.540302px 0.841471px 0px, $c_titulos -0.416147px 0.909297px 0px, $c_titulos -0.989992px 0.14112px 0px, $c_titulos -0.653644px -0.756802px 0px, $c_titulos 0.283662px -0.958924px 0px, $c_titulos 0.96017px -0.279415px 0px
+				margin: 20px 0 5px
+	#figital_world
+		+bk_lgradient2c(to bottom,#5c1893 5%,#000026)
+		position: relative
+		margin: -15vh 0 0
+		padding: 100px 0 0
+		&:before
+			content: " "
+			position: absolute
+			width: 65vw
+			height: 100vh
+			background: url('img/bkg_retro_1_4_web.png') bottom right no-repeat
+			background-size: 70% 100vh
+			top: -15vh
+			left: -25vw
+		&:after
+			content: " "
+			position: absolute
+			width: 30vw
+			height: 100vh
+			background: url('img/bkg_retro_2.png') bottom right no-repeat
+			background-size: contain
+			top: -15vh
+			right: 10vw
+		.overlay-figital
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			+bk_lgradient2c(to bottom,transparent 10%,rgba(#000026,.7))
+			z-index: 9
+		canvas.particles
+			position: absolute
+			width: 100%
+			height: 50%
+			top: 0
+			left: 0
+			z-index: 99
+		.figital_content_frame
+			position: relative
+			z-index: 9999
+			> div
+				padding: 0 0 0 100px
+		p
+			color: $blanco
+			font-family: $fuente_regular
+			font-size: 1.5rem
+			&:not(:last-child)
+				margin: 0 0 30px
+		.b
+			font-family: $fuente_bold
+		.list_topics
+			+ulst
+			li
+				+list
+				padding: 2px 10px
+				border-radius: 15px
+				border: 2px solid $c_detalle
+				color: $blanco
+				font-family: $fuente_bold
+				margin-bottom: 20px
+				text-align: center
+				&:not(:last-child)
+					margin-right: 20px
+		.figital_world_inner
+			img
+				max-width: 550px
+				margin: 0 auto 0 25%
+		.particles-wrapp
+			margin-bottom: 100px
+			margin-top: 360px
+			.particles-inner
+					position: relative
+				.block_intinerario
+					position: absolute
+					max-width: 	200px
+					color: $blanco
+					font-family: $fuente_regular
+					z-index: 999
+					.block_heading
+						background: #00bee8
+						font-family: $fuente_bold
+						text-align: center
+						line-height: 1
+						padding: 	5px 0 3px
+					.block_content
+						padding: 10px 20px
+						font-size: 14px
+						ul
+							+ulst
+							li
+								+list
+								&:before
+									content: "\2022"
+									color: #00bee8
+									font-weight: bold
+									display: inline-block
+									width: 1em
+									margin-left: -1em
+					&:nth-child(2)
+						top: 0
+						left: 25%
+					&:nth-child(3)
+						top: 0
+						right: 30%
+					&:nth-child(4)
+						top: 40%
+						left: 22%
+					&:nth-child(5)
+						top: 40%
+						right: 25%
+					&:nth-child(6)
+						bottom: 0
+						left: 30%
+					&:nth-child(7)
+						bottom: 0
+						right: 25%
+
+			#particles-js
+				width: 400px
+				height: 400px
+				position: relative
+				z-index: 999
+				display: inline-block
+				top: 	50%
+				left: 	50%
+				+transform(translate(-50%, -10%))
+				canvas
+						position: relative
+						z-index: 	999
+			.clircle-exma
+				width: 300px
+				height: 300px
+				background: url('img/exma_circle.png') bottom right no-repeat
+				background-size: cover
+				position: absolute
+				top: 50%
+				left: 50%
+				+transform(translate(-50%,-50%))
+		//efecto grid infinito
+		.grid-frame
+			overflow: hidden
+			position: absolute
+			left: 0
+			top: 0
+			width: 100vw
+			height: 200%
+			+transform(translate(0,-45%))
+			z-index: 0
+		.grid
+			position: absolute
+			bottom: -30%
+			left: 0
+			margin-left: -50%
+			width: 200%
+			height: 100%
+			background-position-y: 0px
+			+transition(0.5s)
+			background-image: repeating-linear-gradient(90deg,var(--grid-color,black) 0%,transparent calc(1px + var(--grid-blur,0px)), transparent var(--grid-size),var(--grid-color,black) calc(var(--grid-size) + 1px + var(--grid-blur,0px))),repeating-linear-gradient(180deg,var(--grid-color,black) 0%,transparent calc(1px + var(--grid-blur,0px)), transparent var(--grid-size),var(--grid-color,black) calc(var(--grid-size) + 1px + var(--grid-blur,0px)))
+			+transform(perspective(50vh) rotateX(60deg) translateZ(10px))
+			animation: moving-grid 0.5s infinite linear
+			z-index: 1
+	#speakers
+		background: url('img/bkg_speakers.png') top right no-repeat, url('img/bkg_speakers_2.png') bottom left no-repeat #00003f
+		background-size: cover
+		padding: 100px 0
+		position: relative
+		.moved-frame
+			max-width: 1000px
+			margin: 0 auto 0 -8vw
+		h2
+			color: $c_detalle
+			font-family: $fuente_bold
+			text-align: center
+			margin-bottom: 100px
+		h3
+			font-family: $fuente_regular
+			text-align: center
+			margin-bottom: 30px
+			color: $blanco
+		.speaker-wrapp
+			display: block
+			width: 300px
+			margin: 0 auto 50px
+			.speaker-img
+				width: 220px
+				border-radius: 50%
+				overflow: hidden
+				margin: 0 auto
+			.speaker-info
+				text-align: center
+				margin-top: 20px
+				span
+					display: block
+				.name
+					font-family: $fuente_regular
+					color: $blanco
+					font-size: 1.3em
+					letter-spacing: 2px
+				.charge
+					color: rgba($blanco,.5)
+					font-family: $fuente_regular
+					font-weight: 100
+					font-size: 13px
+				.topic
+					color: $c_detalle
+					font-family: $fuente_contacto
+					font-size: 14px
+					text-transform: uppercase
+					letter-spacing: 1px
+
+	#stands
+		background: url('img/bkg_stands.jpg') top center no-repeat
+		background-size: cover
+		position: relative
+		z-index: 9999
+		padding: 150px 0
+		&:before
+			content: ""
+			position: absolute
+			width: 100%
+			height: 100%
+			filter: blur(5px)
+
+		.col-intro
+			position: relative
+			.intro_section
+				position: absolute
+				width: 90%
+				top: 50%
+				left: 50%
+				+transform(translate(-50%,-50%))
+				.stands_title
+					line-height: 1
+					span
+						display: block
+						font-family: $fuente_bold
+						&:first-child
+							color: $blanco
+							font-size: 2.7em
+							letter-spacing: 0.9
+						&:nth-child(2)
+							color: $c_titulos
+							font-size: 3.7em
+							letter-spacing: 1.5px
+						&:nth-child(3)
+							color: rgba($negro,.0)
+							-webkit-text-stroke: 1px #fff
+							font-size: 4.2em
+				.h2
+					font-family: $fuente_bold
+					font-size: 2.2em
+					color: $blanco
+		.stands_block
+			position: relative
+			display: flex
+			flex-wrap: wrap
+			color: $blanco
+			font-family: $fuente_bold
+			&:not(:last-child)
+				margin-bottom: 100px
+			.stands-o_title
+				display: block
+				position: absolute
+				left: -65px
+				top: 50%
+				+transform(rotate(-90deg) translate(20%,-50%))
+			.inner_block
+				.title_block
+					padding: 5px 15px 3px
+					display: inline-block
+					color: $negro
+					background: $c_titulos
+					font-family: $fuente_detalles
+					border-radius: 25px
+					line-height: 1
+					margin: -10px 0 20px 30px
+				ul
+					list-style: none
+					font-size: 13px
+					padding: 0  0 0 40px
+					li
+						+list
+						position: relative
+						margin-bottom: 10px
+						&:before
+							content: "\2022"
+							color: #c07df8
+							font-weight: bold
+							display: inline-block
+							width: 1em
+							margin-left: -1em
+							font-size: 18px
+							position: absolute
+							top: 50%
+							+transform(translate(0,-50%))
+						>span
+							display: block
+			.stands_branding
+				border-left: 1px solid $c_titulos
+				> .title_block
+					position: relative
+					&:before
+						content: ""
+						position: absolute
+						width: 50%
+						height: 1px
+						background: $c_titulos
+						top: 50%
+						left: -30px
+						z-index: -1
+						+transform(translate(0,-2px))
+			.price-fill
+				border-top: 1px solid $c_titulos
+			.stand-price
+				text-align: right
+				> div
+					margin-top: -20px
+				span
+					display: block
+					line-height: 1
+					&:first-child
+						color: $c_titulos
+						font-family: $fuente_detalles
+						font-size: 1.1em
+					&:nth-child(2)
+						font-family: $fuente_menu
+						text-align: right
+						font-size: .8em
+				a
+					padding: 5px 15px 3px
+					line-height: 1
+					background: $blanco
+					color: $negro
+					text-align: center
+					border-radius: 20px
+					display: inline-block
+					font-size: .8em
+					+transition(.50s)
+					&:hover
+						background: $c_titulos
+
+	#tickets
+		background: url('img/bkg_tickets_web_2.jpg') top left no-repeat
+		background-size: cover
+		padding: 50px
+		h1
+			text-align: center
+			font-family: $fuente_bold
+			color: $blanco
+			font-size: 3rem
+		.border_effect
+			display: block
+			width: 100%
+			height: 5px
+			background: $blanco
+			border-radius: 15px
+			display: block
+			position: relative
+			box-shadow: 0 0 20px $blanco
+			&:before
+				content: " "
+				position: absolute
+				+bk_lgradient2c(to right, rgba(#2121ff,1), transparent)
+				filter: blur(5px)
+				width: 50%
+				height: 100%
+				top: 0
+			&:after
+				content: " "
+				position: absolute
+				+bk_lgradient2c(to right, transparent 5%, $c_titulos)
+				filter: blur(5px)
+				width: 50%
+				height: 100%
+				top: 0
+				right: 0
+		.table_wrapp
+			padding: 10% 0
+			position: relative
+			&:before
+				content: ""
+				display: block
+				width: 100%
+				height: 110%
+				background: url('img/efecto_luz.png') top center no-repeat
+				background-size: cover
+				opacity: .5
+				//background: linear-gradient(236deg, rgba(255, 0, 255, 0.2) 10%, rgba(255, 255, 255, 0.3) 35%, transparent 90%),linear-gradient(180deg,rgba(35,6,99,.1),transparent)
+				filter: blur(20px)
+				position: absolute
+				top: 0
+				left: 0
+			/*&:after
+				content: ""
+				display: block
+				width: 100%
+				height: 100%
+				background: linear-gradient(125deg, rgba(32,5,94,.2) 5%, rgba(255, 255, 255, 0.3) 35%, transparent 90%)
+				filter: blur(20px)
+				position: absolute
+				top: 0
+				left: 0*/
+		#tickets_comparison
+			margin: 0 auto 0
+			position: relative
+			z-index: 5
+			th,td
+				color: $blanco
+				font-family: $fuente_bold
+				padding: 5px
+				&:not(:first-child)
+					text-align: center
+				&:first-child
+					width: 20%
+					font-size: 20px
+			tr
+				&:not(:last-child)
+					td
+						border-bottom: 1px solid rgba($blanco, .5)
+			.complete_cell
+				text-align: center
+			.ticket-title
+				> span
+					display: block
+					&:not(.title_ticket)
+						font-family: $fuente_menu
+						font-weight: 100
+						letter-spacing: 3px
+						margin-top: 5px
+						font-size: 1.5em
+				.title_ticket
+					padding: 5px 20px 0
+					border-radius: 20px
+					font-size: 2.5em
+					line-height: 1
+				.st_title
+					background: linear-gradient(to right, #1a0257,#491894 35%,#2242fa 70%,#040a87 90%)
+				.scd_title
+					background: linear-gradient(to right, #8c22b4,#7b97f1 30%,#2242fa 50%,#7c2bfc 70%,#920f96 90%)
+				.trd_title
+					background: linear-gradient(to right, #6a4480,#b49fcf 30%,#9b60cb 50%,#783eb5 70%)
+			.icon_check
+				width: 30px
+				height: 30px
+				background: url('img/check.png') top center no-repeat
+				background-size: cover
+				display: inline-block
+			.price_comparison
+				display: inline-block
+				> span
+					display: block
+				.price
+					font-size: 3em
+					font-family: $fuente_bold
+				.taxes
+					font-family: $fuente_menu
+					font-size: 1.3em
+					font-weight: 100
+					margin-top: -10px
+					text-align: right
+				.c_add_to_C
+					padding: 5px 20px 0
+					background: $blanco
+					color: #1a0257
+					font-family: $fuente_bold
+					border-radius: 15px
+					display: inline-block
+					+transition(.50s)
+					&:hover
+						color: $blanco
+						background: #1a0257
+			.mobile_tickets_wrapp
+				display: block
+				width: 100%
+				color: $blanco
+				text-align: center
+				border-radius: 15px
+				border: 3px solid $blanco
+				padding: 20px
+				margin-bottom: 100px
+				.ticket-title
+					margin-top: -40px
+					> span
+						&:not(.title_ticket)
+							margin-top: 0
+				.tickets_content
+					ul
+						+ulst
+						li
+							font-size: 18px
+		.mobile_wrapp
+			position: relative
+			&:before
+				content: ""
+				display: block
+				width: 120%
+				height: 110%
+				background: url('img/efecto_luz.png') top center no-repeat
+				background-size: cover
+				opacity: .5
+				filter: blur(50px)
+				position: absolute
+				top: -7vh
+				left: -6vw
+			> .row
+				margin: 0 auto 0
+
+
+
+	#contact
+		position: relative
+		padding: 100px 0
+		font-family: $fuente_contacto
+		+bk_lgradient2c(to bottom,#00003e, $negro)
+		*
+			color: $blanco
+		.h1,.contact_person
+			font-family: $fuente_bold
+		.h1
+			margin-bottom: 30px
+			display: block
+		.contact_block
+			margin-bottom: 50px
+			&:last-child
+				margin-bottom: 100px
+		.contact_info
+			span
+				display: block
+		.rrss_exma
+			+ulst
+			li
+				+list
+				font-size: 20px
+				.icon_rrss
+					width: 20px
+					height: 20px
+					position: relative
+					display: block
+					&:before
+						font-size: 20px
+				.icon_rrss.facebook
+					text-align: center
+					&:before
+						content: "\f09a"
+						font-family: $fuente-iconos
+				.icon_rrss.instagram
+					&:before
+						content: "\f16d"
+						font-family: $fuente-iconos
+			.icon_rrss.youtube
+					&:before
+						content: "\f16a "
+						font-family: $fuente-iconos
+		form
+			input,textarea
+				background: rgba($c_titulos,.7)
+			input[type="submit"]
+				background: $blanco
+				color: $negro
+				border-radius: 15px
+				font-family: $fuente_bold
+				padding: 5px 20px
+
+
+//Woocommerce
+.woocommerce
+	form
+		.form-row
+			width: 100%
+			label, span
+				display: block
+				width: 100%
+			input,select, .select2-selection
+				height: 40px
+			.select2-selection
+				.select2-selection__arrow b
+					+transform(translate(-50%, 52%))
+					margin-top: 0
+					margin-left: 0
+				.select2-selection__rendered
+					line-height: 40px
+
