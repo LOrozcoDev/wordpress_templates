@@ -1,0 +1,728 @@
+#body-wrapp
+	#content-wrapp
+		.ribbon-tittle
+			text-align: center
+			width: 100%
+			position: relative
+			overflow: hidden
+			font-weight: 700
+			span
+				display: inline-block
+				text-transform: uppercase
+				position: relative
+				&:before
+					content: " "
+					position: absolute
+					width: 150px
+					border-top: 17.5px solid $negro
+					border-bottom: 17.5px solid $negro
+					border-left: 8.5px solid transparent
+					left: -42%
+				&:after
+					content: " "
+					position: absolute
+					width: 150px
+					border-top: 17.5px solid $negro
+					border-bottom: 17.5px solid $negro
+					border-right: 8.5px solid transparent
+					right: -42%
+			&:after
+				content: ""
+				display: inline-block
+				height: 0.2em
+				vertical-align: middle
+				width: 100%
+				margin-right: -100%
+				margin-left: 10%
+				border-top: 1px solid $negro
+			&:before
+				content: ""
+				display: inline-block
+				height: 0.2em
+				vertical-align: middle
+				width: 100%
+				margin-left: -100%
+				margin-right: 10%
+				border-top: 1px solid $negro
+		.ribbon-green
+			color: $c_detalle
+			&:before
+				border-top-color: $c_detalle
+			&:after
+				border-top-color: $c_detalle
+			span
+				&:before
+					border-top-color: $c_detalle
+					border-bottom-color: $c_detalle
+				&:after
+					border-top-color: $c_detalle
+					border-bottom-color: $c_detalle
+		.ribbon-dgreen
+			color: $verdeo
+			&:before
+				border-top-color: $verdeo
+			&:after
+				border-top-color: $verdeo
+			span
+				&:before
+					border-top-color: $verdeo
+					border-bottom-color: $verdeo
+				&:after
+					border-top-color: $verdeo
+					border-bottom-color: $verdeo
+		.ribbon-rouse
+			color: $c_debil
+			&:before
+				border-top-color: $c_debil
+			&:after
+				border-top-color: $c_debil
+			span
+				&:before
+					border-top-color: $c_debil
+					border-bottom-color: $c_debil
+				&:after
+					border-top-color: $c_debil
+					border-bottom-color: $c_debil
+		.ribbon-white
+			color: $blanco
+			&:before
+				border-top-color: $blanco
+			&:after
+				border-top-color: $blanco
+			span
+				&:before
+					border-top-color: $blanco
+					border-bottom-color: $blanco
+				&:after
+					border-top-color: $blanco
+					border-bottom-color: $blanco
+		.short-c
+			span
+				&:before
+					left: -110%
+				&:after
+					right: -110%
+		.mid-c
+			span
+				&:before
+					left: -70%
+				&:after
+					right: -70%
+		.xs-c
+			span
+				&:before
+					left: -130%
+				&:after
+					right: -130%
+		.direct-ribbon
+			padding: 5px
+			color: $blanco
+			display: inline-block
+			position: relative
+			z-index: 2
+			top: -15px
+			font-size: 1.5em
+			margin: 0
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				width: 110%
+				border-top: 15px solid transparent
+				border-bottom: 15px solid transparent
+				z-index: -1
+		.r-green
+			&:before
+				border-top-color: $c_detalle
+				border-bottom-color: $c_detalle
+				border-right: 8px solid transparent
+		.l-green
+			&:before
+				border-top-color: $c_detalle
+				border-bottom-color: $c_detalle
+				border-left: 8px solid transparent
+		.r-rouse
+			&:before
+				border-top-color: $c_debil
+				border-bottom-color: $c_debil
+				border-right: 8px solid transparent
+		.l-rouse
+			&:before
+				border-top-color: $c_debil
+				border-bottom-color: $c_debil
+				border-left: 8px solid transparent
+		.r-white
+			&:before
+				border-top-color: $blanco
+				border-bottom-color: $blanco
+				border-right: 8px solid transparent
+		.l-white
+			&:before
+				border-top-color: $blanco
+				border-bottom-color: $blanco
+				border-left: 8px solid transparent
+		.section-outer
+			padding: 80px 0 40px
+			p
+				color: $gris_c
+			> div
+				width: 100%
+		.heading-inner-section
+			position: relative
+			+transform(scale(1))
+			background-size: cover
+			&:before
+				content: ""
+				float: left
+				padding-bottom: 35%
+		.content-section
+			padding: 80px 0
+		.green
+			color: $c_detalle
+		.line-btn
+			display: inline-block
+			padding: 5px 20px
+			margin: 30px 0
+			border: 3px solid transparent
+			border-radius: 30px
+			text-transform: uppercase
+			font-weight: 700
+		.ln-green
+			border-color: $c_detalle
+			color: $c_detalle
+			&:hover
+				border-color: $blanco
+				color: $blanco
+				background: $c_detalle
+		.ln-rouse
+			border-color: $c_debil
+			color: $c_debil
+			&:hover
+				border-color: $blanco
+				color: $blanco
+				background: $c_debil
+		.ln-amarillo
+			border-color: $amarilloc
+			color: $amarilloc
+			&:hover
+				border-color: $amarilloc
+				color: $c_detalle
+				background: $amarilloc
+		.ln-white
+			border-color: $blanco
+			color: $blanco
+		.full-btn
+			position: relative
+			left: 50%
+			display: inline-block
+			padding: 8px 20px
+			background: $c_debil
+			color: $blanco
+			margin: 15px 0
+			border-radius: 30px
+			text-transform: uppercase
+			font-weight: 700
+			+transform(translate(-50%, 0))
+		.full-btn.green
+			background: $c_detalle
+			color: $blanco
+		.full-btn.rouse
+			background: $c_debil
+			color: $blanco
+		.full-btn.amarillo
+			background: $amarilloc
+			color: $c_detalle
+		.double-saw
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				width: 100%
+				height: 10px
+				background: url('img/ondulado_blanco_superior.png') top repeat-x
+				z-index: 0
+				top: -10px
+			&:after
+				content: ""
+				position: absolute
+				width: 100%
+				height: 10px
+				background: url('img/ondulado_blanco_inferior.png') bottom repeat-x
+				z-index: 0
+				bottom: -10px
+		.up-saw
+			&:before
+				content: ""
+				position: relative
+				width: 100%
+				height: 10px
+				background: url('img/ondulado_blanco_superior.png') repeat-x
+				z-index: 0
+				margin-top: -10px
+		.down-saw
+			&:after
+				content: ""
+				position: relative
+				width: 100%
+				height: 10px
+				background: url('img/ondulado_blanco_inferior.png') repeat-x
+				z-index: 0
+				margin-bottom: -10px
+		.b-shadow
+			box-shadow: 0 0 15px 5px rgba($negro, .2)
+		.bg-gradient-wrouse
+			+bk_lgradient2c(to bottom, $c_domina, $blanco)
+		.bg-gradient-wrousec
+			+bk_lgradient2c(to bottom, $c_debil, $blanco)
+		.bg-gradient-wgreen
+			+bk_lgradient2c(to bottom, $c_detalle, $blanco)
+
+		//Slider
+		#event-slider
+			width: 100%
+			.nav-slides
+				width: 50px
+				height: 50px
+				display: block
+			.prev
+				background: url('img/al_rosaoscuro.svg') no-repeat
+				background-size: cover
+				margin-left: -170px
+			.next
+				background: url('img/ar_rosaoscuro.svg') no-repeat
+				background-size: cover
+				margin-right: -170px
+		#master-Sli
+			background: url('img/foto_slider_01.jpg') top center no-repeat
+			background-size: cover
+			width: 100%
+			.slide-layout
+				padding: 80px 0
+			img
+				max-width: 100%
+				height: auto
+				display: block
+			.slide-capt
+				.event-type
+					padding: 5px
+					color: $blanco
+					display: inline-block
+					position: relative
+					&:before
+						content: ""
+						position: absolute
+						left: 0
+						top: 0
+						right: -10px
+						border-top: 14.5px solid $c_detalle
+						border-bottom: 14.5px solid $c_detalle
+						border-right: 8.5px solid transparent
+						z-index: -1
+				h1
+					font-size: 4.8em
+					font-weight: 700
+					color: $c_domina
+				.event-meta
+					font-size: 1.5em
+					font-weight: 500
+					.pinky-d
+						color: $c_debil
+
+				.event-registry
+					display: inline-block
+					padding: 8px 20px
+					background: $c_debil
+					color: $blanco
+					margin: 15px 0
+					border-radius: 30px
+			.nav-slides
+				width: 50px
+				height: 50px
+				display: block
+			.prev
+				background: url('img/a_left.svg') no-repeat
+				background-size: cover
+			.next
+				background: url('img/a_right.svg') no-repeat
+				background-size: cover
+		//Estructura del evento - Home
+		.event-structure
+			box-shadow: inset 0 3px 10px rgba($negro, .2)
+			.event-desc
+				text-align: center
+				margin-bottom: 30px
+			.esc-col
+				text-align: center
+			.icon-section
+				display: inline-block
+				padding: 20px
+				box-shadow: 0px 15px 20px -15px rgba($negro, .8)
+				img
+					width: 140px
+					height: 140px
+			.title-col
+				text-transform: uppercase
+				color: $c_debil
+				padding: 30px 0
+				h1
+					font-weight: 700
+					font-size: 3em
+				h2
+					font-weight: 700
+					font-size: 2.2em
+		// Instructoras - Home
+		.event-instructors
+			background: $c_debil
+			.row-teach
+				padding: 40px 0 0
+			.teachers-col
+				.teacher-id
+					margin-bottom: -10px
+					.teacher-photo
+						img
+							max-width: 100%
+						
+				.about-teacher
+					font-size: .8em
+					color: $blanco
+					padding-bottom: 10px
+					border-bottom: 1px solid $blanco
+					p
+						color: $blanco
+				> a
+					color: $blanco
+					display: block
+					position: relative
+					padding: 5px 20px
+					&:before
+						content: ""
+						position: absolute
+						left: 0
+						top: 50%
+						width: 15px
+						height: 15px
+						background: url('img/instagram_b.svg') no-repeat
+						background-size: cover
+						display: inline-block
+						+transform(translate(0, -50%))
+		//Conoce el Hotel - Home
+		.place-desc-frame
+			.heading-place
+				color: $c_debil
+				h2
+					font-weight: 400
+					font-size: 2em
+				h1
+					font-weight: 800
+					font-size: 2.5em
+		// Talleres - Home
+		.row-taller
+			padding: 40px 0 0
+			.inner-tittle
+				padding: 50px 0
+		.taller-col
+			text-align: left
+			.taller-img
+				img
+					max-width: 100%
+					height: auto
+					display: block
+			.taller-data
+				font-size: 1.1em
+			.taller-desc
+				h2
+					font-size: 1.5em
+				p
+					font-size: .9em
+					color: $gris
+			a
+				display: inline-block
+				padding: 5px 20px
+				margin: 30px 0
+				border: 3px solid $c_debil
+				border-radius: 30px
+				text-transform: uppercase
+				font-weight: 700
+				color: $c_debil
+				&:hover
+					border-color: $blanco
+					color: $blanco
+					background: $c_debil
+			//Talleres - Interna
+			.inner-taller-bottom
+				*
+					display: inline-block
+					&:not(:last-child)
+						margin-right: 10px
+				.price
+					font-size: 1.5em
+					vertical-align: middle
+					padding: 5px
+					border-right: 1px solid $c_debil
+					color: $c_debil
+				.info
+					left: 0
+					+transform(none)
+
+		//Nosotros - Home
+		.about-us
+			background: url('img/bkg_01.jpg') center center no-repeat
+			padding: 80px 40px 40px
+			.about-us-lay
+				border-left: 3px solid $blanco
+				position: relative
+				padding-left: 30px
+				&:before
+					content: ""
+					background: $amarilloc
+					width: 5px
+					height: 30%
+					position: absolute
+					top: 50%
+					left: -15px
+					+transform(translate(0, -50%))
+			.us-title
+				font-family: $fuente-pagina3
+				position: relative
+				color: $blanco
+				h1
+					font-size: 8.5em
+				h3
+					display: inline-block
+					left: 12%
+					position: absolute
+					+transform(translate(-20%,0))
+			.us-excerpt
+				max-width: 50%
+				p
+					color: $blanco
+					font-weight: 600
+		// Nosotros - Interna
+		.us-inner
+			background: url('img/subheader_nosotros.jpg') bottom center no-repeat
+			background-size: cover
+		.img-us
+			img
+				max-width: 100%
+				height: auto
+				display: block
+		.section-content
+			color: $gris
+		.gallery
+			+ulst
+			text-align: center
+			li
+				+list
+				max-width: 20%
+				margin: 5px
+				img
+					max-width: 100%
+					height: auto
+					display: block
+		// Instagram -home
+		.instagram
+			text-align: center
+			position: relative
+		//Talleres
+		.work-inner
+			background: url('img/subheader_talleres.jpg') bottom center no-repeat
+			background-size: cover
+		.cart-btn 
+			position: relative
+			&:before
+				content: ""
+				width: 20px
+				height: 20px
+				background: url('img/shopping_r.svg') top center no-repeat
+				background-size: cover
+				position: absolute
+				left: 10px
+			&:after
+				content: "+"
+				position: absolute
+				right: 5px
+			&:hover
+				&:before
+					background: url('img/shopping_b.svg') top center no-repeat
+					background-size: cover
+		//evento
+		.row-event
+			padding: 40px 0 0
+			h2
+				margin-bottom: 40px
+		.event-frame
+			max-width: 350px
+			margin: 0 auto 20px
+		.event-inner
+			background: url('img/subheader_evento.jpg') bottom center no-repeat
+			background-size: cover
+		.meta-event
+			background: $c_debil
+			position: relative
+			padding: 17px 0
+			color: $blanco
+			.tittle-event
+				padding: 0 10px
+			h1
+				font-size: 1.3em
+				font-weight: 700
+			h2
+				font-size: 1em
+				margin: 0
+			.price
+				span
+					width: 100%
+					text-align: right
+					top: 50%
+					right: -6px
+					max-height: 30px
+					color: $c_debil
+					line-height: 20px
+					+transform(translate(0, -50%))
+		.pack-desc
+			ul
+				list-style: none
+				display: block
+				width: 100%
+				padding: 10px 0
+				li
+					position: relative
+					&:before
+						content: "\2014"
+						position: relative
+						margin-right: 10px
+		.package-ticket
+			form
+				label
+					color: $c_debil
+					text-transform: uppercase
+					font-weight: 700
+				input[type="number"]
+					border: 1px solid $c_debil
+					padding: 5px
+				button
+					margin: 0
+					font-size: .9em
+					position: relative
+					padding: 8px 30px 8px 10px
+					&:after
+						content: ""
+						width: 20px
+						height: 20px
+						background: url('img/shopping_b.svg') top center no-repeat
+						background-size: cover
+						position: absolute
+						right: 10px
+						top: 50%
+						+transform(translate(0, -50%))
+		// Sigle Post
+		.single-post
+			color: $gris
+			span
+				&:not(.ribbon-tittle > span)
+					display: block
+			> h2
+				margin-bottom: 50px
+			.single-post-info
+				padding: 25px 0
+				border-top: 1px solid $c_debil
+				border-bottom: 1px solid $c_debil
+				margin-top: 25px
+				margin-bottom: 25px
+				.info-col
+					> *
+						display: inline-block
+						vertical-align: middle
+					.info-icon
+						width: 40px
+						height: 40px
+					.info-icon.fecha
+						background: url('img/icono_calendar.svg') top center no-repeat
+						background-size: cover
+					.info-icon.time
+						background: url('img/icono_clock.svg') top center no-repeat
+						background-size: cover
+					.info-icon.place
+						background: url('img/icono_placeholder.svg') top center no-repeat
+						background-size: cover
+					.info-meta
+						margin-left: 10px
+						font-size: 1.2em
+						.info-tittle
+							color: $c_debil
+							font-weight: 700
+
+			.single-post-price
+				position: relative
+				span
+					display: inline-block
+				.price
+					font-size: 3.2em
+					color: $c_debil
+				.cupos
+					position: absolute
+					bottom: 10px
+					right: 0
+					font-size: 1.05em
+					.count
+						font-weight: 700
+			.single-post-addtocart
+				padding: 30px 0
+		.more-post
+			h2
+				margin-bottom: 50px
+		.load-more-frame
+			text-align: center
+			.load-more
+				display: inline-block
+				text-transform: uppercase
+				font-size: 1.1em
+		//Carrito
+		//Contacto
+		.contact
+			background: url('img/subheader_contacto.jpg') bottom center no-repeat
+			background-size: cover
+		.form-block
+			margin-bottom: 50px
+		.advice
+			display: block
+			color: $c_debil
+			font-size: 1.1em
+		#contact-form
+			box-shadow: 0 0 5px 3px rgba(0, 0, 0, .2)
+			padding: 5px
+			border-radius: 5px
+			fieldset
+				padding: 10px
+				+bk_lgradient2c(to bottom, rgba($c_debil, .2), $blanco)
+			label
+				color: $c_debil
+				font-size: 1.2em
+			input
+				border-color: $c_debil
+				&:focus
+					outline: none
+			textarea
+				border-color: $c_debil
+				&:focus
+					outline: none
+			#send
+				background: $c_debil
+				color: $blanco
+				text-transform: uppercase
+				border-radius: 30px
+		.contact-block
+			#map
+				height: 300px
+			.contact-data
+				margin: 20px 0
+				span
+					display: block
+					margin: 0 0 10px
+				.title-data
+					font-size: 1.2em
+					color: $c_debil
+					margin: 0
+					text-transform: uppercase
+					font-weight: 700

@@ -1,0 +1,39 @@
+.home-page-products li .star-rating, .woocommerce-product-rating .star-rating, .products li .woocommerce-LoopProduct-link .star-rating,  .comment-text .star-rating, .comment-text p.stars [class^="star-"], .comment-text p.stars [class*=" star-"] {
+	font-family: WooCommerce; 
+	speak: none;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	font-size: 1em;
+}
+.home-page-products li .star-rating, .woocommerce-product-rating .star-rating, .products li .woocommerce-LoopProduct-link .star-rating, .comment-text .star-rating {
+	overflow: hidden;
+	position: relative;
+	height: 1em;
+	width: 5em;
+}
+.home-page-products li .star-rating:before, .woocommerce-product-rating .star-rating:before, .products li .woocommerce-LoopProduct-link .star-rating:before, .comment-text .star-rating:before {
+	content: "\e021\e021\e021\e021\e021";
+	float: left;
+	top: 0;
+	left: 0;
+	position: absolute;
+	color: #999;
+}
+.home-page-products li .star-rating span, .woocommerce-product-rating .star-rating span, .products li .woocommerce-LoopProduct-link .star-rating span,.comment-text .star-rating span {
+	overflow: hidden;
+	float: left;
+	top: 0;
+	left: 0;
+	position: absolute;
+	padding-top: 1.5em
+}
+.home-page-products li .star-rating span:before, .woocommerce-product-rating .star-rating span:before, .products li .woocommerce-LoopProduct-link .star-rating span:before, .comment-text .star-rating span:before {
+	content: "\e020\e020\e020\e020\e020";
+	top: 0;
+	position: absolute;
+	left: 0;
+	color: #F90;
+}

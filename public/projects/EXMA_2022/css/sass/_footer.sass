@@ -1,0 +1,11 @@
+#footer_wrapp
+	background: $negro
+	*
+		color: $blanco
+			
+//animaciones
++keyframe(moving-grid)
+	0%
+		transform: perspective(50vh) rotateX(60deg) translateZ(10px) translateY(-var(--grid-size))
+	100%
+		transform: perspective(50vh) rotateX(60deg) translateZ(10px) translateY(var(--grid-size))

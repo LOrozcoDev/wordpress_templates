@@ -1,0 +1,130 @@
++mediaqueriesmw(screen, 400px)
+	#body-wrapp
+		#header-wrapp
+				.logo-frame
+						text-align: left
+		#content-wrapp
+			.whatts-btn
+				font-size: 11px
+			#intro-wrapp
+				background: url('img/bkg_intro_web.jpg') top center no-repeat
+				background-size: cover
+				background-position-x: 60%
+				margin: 0
+				padding: 15px 15px 50px
+				.intro-row
+					> div
+						&:first-child
+							padding-left: 0
+							.date-event
+								.month
+									font-size: 2rem
+								.dates
+									font-size: 2.7rem
+			#price-tickets
+				.price-tickets
+					width: 90%
+					z-index: 0
+					.price-middle
+						.price-inner
+							> div
+								&:nth-child(2)
+									> span
+										&:first-child
+											font-size: 3rem
+										&:last-child
+											left: 75%
+											font-size: .8em
+							.small
+								width: 65%
+								font-size: 11px
+			#encounter
+				background: url('img/bkg_encuentro_webres.jpg') bottom center no-repeat $c_domina
+				background-size: contain
+				padding: 20% 0
+				margin-top: -100px
+				.filling-col
+					height: 20vh
+				.ecounter-col
+					.ecounter-inner
+						span
+							text-align: center
+					h1
+						text-align: center
+			#metaverso
+				height: auto
+				&:after
+					background-position: 100% 100%
+					top: 0
+				.filling-col
+					height: 40vh
+			#figital_world
+				margin: 0
+				&:before
+					background: transparent
+					display: none
+				&:after
+					background: transparent
+					display: none
+				.figital_content_frame
+					> div
+						padding: 20px
+						text-align: center
+				.figital_world_inner
+					img
+						margin: 148px auto 0 -70vw
+				.particles-wrapp
+					margin-top: 80px
+					.clircle-exma
+						width: 200px
+						height: 200px
+					.particles-inner
+						.block_intinerario
+							> ul > li
+								background: rgba($negro,.4)
+							&:nth-child(2)
+								top: 0
+								left: 15px
+							&:nth-child(3)
+								top: 0
+								right: 40px
+							&:nth-child(4)
+								top: 60%
+								left: 0
+							&:nth-child(5)
+								top: 15%
+								right: 0
+							&:nth-child(6)
+								bottom: 0
+								left: 20px
+							&:nth-child(7)
+								bottom: 0
+								right: 30px
+			#stands
+				padding: 100px 0
+				.col-intro
+					.intro_section
+						position: relative
+						top: 0
+						left: 0
+						+transform(translate(0,0))
+						.stands_title
+							text-align: center
+							span
+								&:first-child
+									font-size: 1.6em
+								&:nth-child(2)
+									font-size: 2.5em
+								&:nth-child(3)
+									font-size: 3em
+						.h2
+							font-size: 1.5em
+							text-align: center
+				.stands_block
+					padding: 50px
+					margin-bottom: 0
+					.stands_content
+						border-left: 1px solid $c_titulos
+			#tickets
+				padding: 15px
+				background: #10012b

@@ -1,7 +1,17 @@
 [
     {
-        "name": "EXA",
-        "url": "projects/EXA/index.html",
-        "thumbnail": null
+        "name": "EXMA_2020",
+        "url": "projects/EXMA_2020/index.html",
+        "thumbnail": "projects/EXMA_2020/thumbnail.jpg"
+    },
+    {
+        "name": "EXMA_2022",
+        "url": "projects/EXMA_2022/index.html",
+        "thumbnail": "projects/EXMA_2022/thumbnail.jpg"
+    },
+    {
+        "name": "Masternet_2018",
+        "url": "projects/Masternet_2018/index.html",
+        "thumbnail": "projects/Masternet_2018/thumbnail.jpg"
     }
 ]

@@ -1,0 +1,69 @@
+#body-wrapp
+	.logo
+		background: url('img/logo.png') top center no-repeat
+		width: 250px
+		height: 150px
+		background-size: contain
+		display: block
+		position: relative
+		+transform(scale(1))
+		z-index: 999
+	#header-wrapp
+		background: $c_domina
+		height: 75px
+		border-bottom: 1px solid $c_debil
+		position: relative
+		z-index: 9999
+		box-shadow: 0 0 10px 0.5px rgba($negro, .8)
+		.navigate-frame
+			padding: 15px
+/*menu*/
+@import _menu
+/*menu*/
+.social-frame
+	border-right: 1px solid $c_debil
+.social-icons
+	+ulst
+	margin: 10px 0
+	text-align: center
+	li
+		+list
+		&:not(:last-child)
+			margin-right: 10px
+	.social-icon
+		width: 20px
+		height: 20px
+		display: block
+		+transition(.50s)
+	.facebook
+		background: url('img/facebook_v.svg') top center no-repeat
+		background-size: cover
+	.twitter
+		background: url('img/twitter_v.svg') top center no-repeat
+		background-size: cover
+	.instagram
+		background: url('img/instagram_v.svg') top center no-repeat
+		background-size: cover
+	.youtube
+		background: url('img/youtube_v.svg') top center no-repeat
+		background-size: cover
+	.flirck
+		background: url('img/ball_flirck_w.svg') top center no-repeat
+		background-size: cover
+.cart-head
+	.cart
+		display: inline-block
+		width: 30px
+		height: 30px
+		background: url('img/shopping_b.svg') top center no-repeat
+		background-size: contain
+		margin: 5px
+		position: relative
+		> a
+			position: absolute
+			top: -10px
+			right: -10px
+			background: $c_debil
+			color: $blanco
+			padding: 0 5px
+			border-radius: 50%
