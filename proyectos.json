@@ -13,5 +13,10 @@
         "name": "Masternet_2018",
         "url": "projects/Masternet_2018/index.html",
         "thumbnail": "projects/Masternet_2018/thumbnail.jpg"
+    },
+    {
+        "name": "Sokkergroup_2018",
+        "url": "projects/Sokkergroup_2018/index.html",
+        "thumbnail": null
     }
 ]

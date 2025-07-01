@@ -1,0 +1,61 @@
+= transition($valor)
+	-webkit-transition: all $valor ease
+	-moz-transition: all $valor ease
+	-ms-transition: all $valor ease
+	-o-transition: all $valor ease
+	transition: all $valor ease
+= ptransition($valor)
+	-webkit-transition: $valor 
+	-moz-transition: $valor 
+	-ms-transition: $valor 
+	-o-transition: $valor 
+	transition: $valor 
+= bk_lgradient2c($direccion, $colorbase, $colorfinal)
+	background: linear-gradient($direccion, $colorbase,$colorfinal)
+= mediaqueries($device, $maxwidth, $maxheight, $orientationdevice)
+	@media #{$device} and ($fWidth: $maxwidth )  and ($fHeight: $maxheight) and ($fOrientation: $orientationdevice)
+		@content
+= mediaqueriesfw($device, $maxwidth, $maxheight)
+	@media #{$device} and ($flexWidth: $maxwidth )  and ($flexHeight: $maxheight)
+		@content
+= mediaqueriesmw($device, $maxwidth)
+	@media #{$device} and ($flexWidth: $maxwidth )
+		@content
+= mediaqueriesmiw($device, $minwidth)
+	@media #{$device} and ($mWidth: $minwidth )
+		@content
+= ulst
+	list-style: none
+	padding: 0
+= list
+	display: inline-block
+= transform($prop)
+	-webkit-transform: ($prop)
+	-moz-transform: ($prop)
+	-ms-transform: ($prop)
+	-o-transform: ($prop)
+	transform: ($prop)
+	
+=font-face($family, $path, $svg, $weight: normal, $style: normal)
+	@font-face
+		font-family: $family
+		src: url('#{$path}.eot')
+		src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg##{$svg}') format('svg')
+		font-weight: $weight
+		font-style: $style
+= animation($cont)
+	-webkit-animation: $cont
+	-moz-animation: $cont
+	-ms-animation: $cont
+	-o-animation: $cont
+	animation: $cont
+=keyframe($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+

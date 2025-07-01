@@ -1,0 +1,260 @@
+html
+	margin: 0
+	padding: 0
+	height: 100% 
+body
+	@extend html
+	background: $c_domina
+	font-family: $fuente-pagina
+	font-size: 13px
+	overflow-x: hidden
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+		border-radius: 10px
+		background-color: $blanco
+	&::-webkit-scrollbar
+		width: 11px
+		background-color: $blanco
+	&::-webkit-scrollbar-thumb
+		border-radius: 10px
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+		background-color: rgba($negro, .5)
+a
+	text-decoration: none
+	outline: none !important
+	-moz-outline-style: none !important
+	+transition(.25s)
+*
+	padding: 0 
+	margin: 0
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+*:before
+	@extend *
+*:after
+	@extend *
+a:hover
+	@extend a
+a:active
+	@extend a
+a:visited
+	@extend a
+a:focus
+	@extend a
+p
+	margin: 0
+	font-family: $fuente-pagina2
+img
+	max-width: 100%
+	height: auto
+	display: block
+
+/*Estilos de Entradas*/
+.center
+	text-align: center
+img.center  
+	display: block 
+	margin-left: auto !important
+	margin-right: auto !important
+img[align="center"]
+	@extend img,.center
+img.aligncenter
+	@extend img,.center
+.alignleft 
+	float: left
+img.alignleft 
+	margin: 2px 10px 5px 0 
+	float: left
+img[align="left"]
+	@extend img,.alignleft
+.alignright 
+	float: right
+img.alignright
+	margin: 2px 0 5px 10px  
+	float: right
+img[align="right"]
+	@extend img,.alignright
+.clear 
+	clear: both
+hr.clear 
+	clear: both
+	visibility: hidden 
+	margin: 0 
+	padding: 0 
+	height: 0
+p strong  
+	font-weight: bold
+article p 
+	font-family: $fuente_pagina
+	margin: 0
+/* /Estilos de Entradas*/
+#body-wrapp
+	width: 100%
+	padding: 0
+	position: relative
+	background: $c_domina
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+		border-radius: 10px
+		background-color: $blanco
+	&::-webkit-scrollbar
+		width: 11px
+		background-color: $blanco
+	&::-webkit-scrollbar-thumb
+		border-radius: 10px
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+		background-color: rgba($c_domina, .5)
+	&:before
+		content: ""
+		position: fixed
+		width: 100%
+		height: 50%
+		background: #000
+		top: 0
+		z-index: 9999
+		+transition(.50s)
+	&:after
+		content: ""
+		position: fixed
+		width: 100%
+		height: 50%
+		background: #000
+		bottom: 0
+		z-index: 9999
+		+transition(1.50s)
+#body-wrapp.inner-content
+	background: url('img/bkg_interna_sokker.jpg') top center no-repeat
+#body-wrapp.loaded
+	&:before
+		height: 0
+	&:after
+		height: 0
+	.universalframe
+		max-width: 1400px
+		margin: 0 auto 0
+	.mid-frame
+		max-width: 900px
+		margin: 0 auto 0
+	.clearp
+		padding: 0
+	.clearm
+		margin: 0
+	.clearboth
+		margin: 0
+		padding: 0
+	.resalt
+		color: $rojo
+		font-weight: 700
+	.wrpp
+		margin: 0
+		padding: 0
+	.bgg-up
+		+bk_lgradient2c(to bottom, $blanco, $gris)
+	.bgg-dwn
+		+bk_lgradient2c(to bottom, $gris, $blanco)
+
+	.full-height
+		height: 100%
+	.parent-post
+		position: relative
+	.child-post
+		position: absolute
+	.bold
+		font-weight: 700
+	.thin
+		font-weight: 100
+	#bk-video
+		width: 100%
+		height: 100%
+		//background: radial-gradient( transparent, rgba( $negro , .1), rgba( $negro , .5))
+		position: relative
+		margin: 0
+		video
+			position: fixed
+			top: 50%
+			left: 50%
+			min-width: 100%
+			min-height: 100%
+			width: auto
+			height: auto
+			z-index: -10
+			transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0)
+			display: block
+	#body-psdooff
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+	.flex-frame
+		padding: 0 60px
+	.display-fix
+		+bk_lgradient2c(120deg, $gris, $blanco)
+		.modal-content
+			background: transparent
+			border: none
+			.modal-header
+				position: relative
+				border: none
+				button
+					position: absolute
+					right: 0
+					top: 10px
+					width: 40px
+					height: 40px
+					border-radius: 50%
+					border: 2px solid $negro
+					opacity: 1
+					cursor: pointer
+					&:focus
+						outline: none
+	.socials
+		display: inline-block
+		list-style: none
+		margin: 0
+		padding: 15px 0 0
+		li
+			display: inline-block
+			position: relative
+			&:not(:last-child)
+				margin-right: 10px
+			a
+				display: block
+				width: 20px
+				height: 20px
+			.social-icon.fa
+				background: url(img/facebook.svg) no-repeat
+				background-size: cover
+			.social-icon.tw
+				background: url(img/twitter.svg) no-repeat
+				background-size: cover
+			.social-icon.you
+				background: url(img/youtube.svg) no-repeat
+				background-size: cover
+			.social-icon.ins
+				background: url(img/instagram.svg) no-repeat
+				background-size: cover
+	.carousel-inner
+		.onebyone-carosel 
+			margin: auto
+			width: 90%
+			.active.left 
+				left: -33.33%
+			.active.right 
+				left: 33.33%
+			.next 
+				left: 33.33%
+			.prev 
+				left: -33.33%
+		.item
+			> div
+				float: left
+	#content-wrapp
+		.fix-item
+			display: block
+			+transition(.50s)
+		.fixed
+			position: fixed 
+			z-index: 999
+			top: 0

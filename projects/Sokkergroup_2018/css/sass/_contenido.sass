@@ -1,0 +1,212 @@
+#body-wrapp
+	#content-wrapp.inner-content
+		.news-row
+			padding: 50px 0
+	#content-wrapp.single-content
+		margin-top: 134px
+		.w-frame
+			padding: 30px 15px
+			background: $blanco
+			margin-bottom: 50px
+	#content-wrapp
+		#CarouIntro
+			width: 100%
+		.section-row
+			padding: 50px 0
+		.about-row
+			.about-frame
+				margin-bottom: 15px
+				border-bottom: 1px solid $c_detalle
+				position: relative
+				max-width: 350px
+				margin: 0 auto
+				&:after
+					content: "+"
+					position: absolute
+					color: $c_detalle
+					font-size: 16px
+					bottom: 0
+					right: 0
+					padding: 5px
+				*
+					color: $blanco
+				.icon-about
+					width: 150px
+					height: 150px
+					margin: 15px auto
+					a
+						display: block
+					img
+						width: 100%
+						height: auto
+				.desc-about
+					line-height: 1.2
+					font-size: 11px
+					text-align: center
+					padding: 25px 0
+					h2
+						font-size: 2.5em
+						font-weight: 700
+						text-align: center
+						margin-bottom: 30px
+					.excerp-about
+						margin-bottom: 10px
+				a
+					display: inline-block
+					margin-top: 20px
+					padding: 10px 20px
+					background: $c_detalle
+					border-radius: 30px
+					text-transform: uppercase
+					letter-spacing: 1px
+					font-weight: 100
+		.serv-row
+			.strat-frame
+				text-align: center
+				position: relative
+				padding: 0
+				width: 100%
+				img
+					display: inline-block
+		.bio-row
+			padding: 150px 0
+			+bk_lgradient2c(to bottom, rgba($negro, .5), transparent )
+			*
+				color: $blanco
+			h1
+				font-weight: 600
+				margin: -8px 0 20px
+			.content-bio
+				padding: 20px 0 30px
+				border-bottom: 1px solid $c_detalle
+				margin-bottom: 20px
+			a
+				display: inline-block
+				margin-top: 20px
+				padding: 10px 20px
+				background: $c_detalle
+				border-radius: 30px
+				text-transform: uppercase
+				letter-spacing: 1px
+				font-weight: 100
+		.feed-row
+			background: $c_debil
+		.news-row
+			padding: 150px 0
+			h1
+				color: $c_detalle
+				position: relative
+				padding: 0 15px
+				width: 100%
+				text-transform: uppercase
+				font-weight: 600
+				overflow: hidden
+				margin: 0 0 50px
+				&:after
+					content: ""
+					display: inline-block
+					height: 0.5em
+					vertical-align: bottom
+					width: 82%
+					margin-right: -100%
+					margin-left: 10px
+					border-top: 2px solid $c_detalle
+
+			.news-frame
+				.img-news
+					border-bottom: 2px solid $c_detalle
+				.data-news
+					padding: 10px 15px
+					h2
+						color: $blanco
+						font-size: 18px
+						font-weight: 600
+						a
+							color: $blanco
+		//Page
+		.heading-page
+			margin: 170px 0 30px
+			h1
+				color: $c_detalle
+				text-align: center
+				position: relative
+				padding: 0 15px
+				width: 100%
+				text-transform: uppercase
+				font-weight: 600
+				overflow: hidden
+				margin: 0 0 50px
+				&:before
+					content: ""
+					display: inline-block
+					height: 0.5em
+					vertical-align: bottom
+					width: 82%
+					margin-left: -100%
+					margin-right: 10px
+					border-top: 2px solid $c_detalle
+				&:after
+					content: ""
+					display: inline-block
+					height: 0.5em
+					vertical-align: bottom
+					width: 82%
+					margin-right: -100%
+					margin-left: 10px
+					border-top: 2px solid $c_detalle
+		.content-page
+			margin-bottom: 50px
+			*
+				color: $blanco
+				
+		//Post
+		.heading-post
+			margin-bottom: 30px
+			h1
+				font-weight: 600
+			.date-post
+				display: inline-block
+				padding: 5px 10px
+				background: $c_detalle
+				color: $blanco
+				font-weight: 600
+		.content-post
+			color: $negro
+			font-weight: 500
+		//Category
+		.news-frame
+			.img-news
+				border-bottom: 2px solid $c_detalle
+				width: 100%
+				overflow: hidden
+				img
+					+transition(.50s)
+			.data-news
+				padding: 10px 0
+				h2
+					color: $negro
+					font-size: 20px
+					font-weight: 600
+					margin: 0 0 -2px
+				a
+					color: $negro
+				.date-post
+					font-size: 12px
+			&:hover
+				.img-news
+					img
+						+transform(scale(1.2))
+		#paginacion
+			border-top: 2px solid $c_detalle
+			padding: 5px 0 5px !important
+			text-align: right
+			margin-top: 30px
+			a
+				font-size: 12pt
+				letter-spacing: -0.03em
+				line-height: 1em
+				color: $c_detalle
+				font-weight: bold
+				margin-right: 20px
+
+
