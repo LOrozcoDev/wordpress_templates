@@ -15,13 +15,13 @@
         "thumbnail": "projects/Masternet_2018/thumbnail.jpg"
     },
     {
+        "name": "PLA_2019",
+        "url": "projects/PLA_2019/index.html",
+        "thumbnail": "projects/PLA_2019/thumbnail.jpg"
+    },
+    {
         "name": "Sokkergroup_2018",
         "url": "projects/Sokkergroup_2018/index.html",
         "thumbnail": "projects/Sokkergroup_2018/thumbnail.jpg"
-    },
-    {
-        "name": "pla",
-        "url": "projects/pla/index.html",
-        "thumbnail": "projects/pla/thumbnail.jpg"
     }
 ]
