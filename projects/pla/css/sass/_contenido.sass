@@ -1,0 +1,289 @@
+#body-wrapp
+	#content-wrapp
+		overflow-x: hidden
+		.scrollreveal
+			opacity: 0
+		.animated
+			opacity: 1
+		.see-more
+			display: inline-block
+			padding: 5px 50px
+			text-transform: uppercase
+			border: 3px solid $c_detalle
+			border-radius: 25px
+			font-weight: 700
+			+transition(.50s)
+			&:hover
+				background: $c_detalle
+				color: $blanco
+		.see-more.blanco
+			color: $blanco
+		.see-more.gris
+			color: $gris_o
+			&:hover 
+				color: $blanco
+		.heading-block
+			text-align: center
+			.title-block
+				font-family: $fuente-detalles
+				position: relative
+				display: inline-block
+				font-size: 5em
+				margin-bottom: 50px
+				color: $blanco
+				&:after
+					content: " "
+					position: absolute
+					width: 25%
+					height: 5px
+					background: $c_detalle
+					top: 90%
+					left: 50%
+					+transform(translate(-50%,0))
+			.title-block.gris
+				color: $gris_o
+			.title-block.blanco
+				color: $blanco
+		.intro
+			height: calc(100vh - 75px)
+			max-height: calc(100vh - 75px)
+			position: relative
+			font-family: $fuente-detalles
+			text-align: center
+			.intro-winner
+				position: absolute
+				top: 45%
+				left: 50%
+				+transform(translate(-50%,-50%))
+				z-index: 0
+				h2
+					text-transform: uppercase
+					color: $c_detalle
+					font-size: 3em
+					letter-spacing: 30px
+					line-height: 1
+					margin: 0 0 -40px
+				h1
+					font-size: 30em
+					line-height: 1
+				h3
+					text-align: right
+					font-size: 8em
+					color: $c_detalle
+					margin: -80px 0 0
+			.bg-jugador
+				position: relative
+				width: 962px
+				height: 721px
+				margin: 150px auto 0
+			.intro-jugador
+				position: relative
+				margin: 150px auto -150px
+			.nombre-jugador
+				margin: -220px auto 0
+				position: relative
+				z-index: 99
+				font-size: 5em
+				> span
+					display: inline-block
+					background: $negro
+					line-height: 1
+					padding: 5px 25px
+					position: relative
+					&:before
+						content: " "
+						position: absolute
+						width: 20%
+						height: 100%
+						+transform(skew(-20deg))
+						top: 0
+						left: -10%
+						background: $negro
+						z-index: -1
+					&:after
+						content: " "
+						position: absolute
+						width: 20%
+						height: 100%
+						+transform(skew(-20deg))
+						top: 0
+						left: 90%
+						background: $negro
+						z-index: -1
+					span
+						letter-spacing: 10px
+				.nombre-blanco
+					color: $blanco
+				.nombre-naranja
+					color: $c_detalle
+			#play-trigg
+				position: relative
+				display: block
+				width: 80px
+				height: 80px
+				border: 5px solid $negro
+				border-radius: 50%
+				margin: 0 auto 
+				&:before
+					content: "\f04b"
+					font-family: $fuente-iconos
+					color: $negro
+					font-size: 3em
+					line-height: 70px
+					text-align: center
+					margin-right: -8px
+		.winners
+			background: $gris_o
+		.section-carousel.gris
+			.pla-icon
+				background: url('img/logo_gris.jpg') top center no-repeat
+			.title-block
+				color: $blanco
+			.block-desc
+				color: $blanco
+		.section-carousel.blanco
+			.pla-icon
+				background: url('img/logo_gris_blanco.jpg') top center no-repeat
+			.title-block
+				color: $gris_o
+			.block-desc
+				color: $gris_o
+		.section-carousel
+			padding: 30px 0 100px
+			position: relative
+			+transform(translate(0, 180px))
+			.heading-block
+				text-align: center
+				.pla-icon
+					width: 94px
+					height: 115px
+					position: relative
+					margin: 0 auto
+				.block-desc
+					font-size: 18px
+					margin-bottom: 50px
+			.players-carousel
+				.slick-track
+					.slick-slide
+						margin: 0 15px 0
+				.slick-prev, .slick-next
+					top: 110%
+					width: 100px
+					height: 50px
+					&:before
+						content: " "
+						position: absolute
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
+						background: url('img/flecha.svg') no-repeat
+						background-size: contain
+				.slick-prev
+					left: 40%
+					&:before
+						+transform(rotate(180deg))
+				.slick-next
+					left: 55%
+					right: 0
+		.about-la
+			background: url('img/bkg_estadio.jpg') top center no-repeat
+			background-size: cover
+			padding: 100px 0 50px
+			position: relative
+			margin-top: 180px
+			text-align: center
+			overflow: hidden
+			.ibg-bg
+				position: absolute
+				top: 0px
+				max-width: 100%
+			.about-la-content
+				position: absolute
+				width: 80%
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				z-index: 99
+				.about-la-title
+					display: block
+					position: relative
+					font-size: 10em
+					letter-spacing: 20px
+					text-transform: uppercase
+					font-family: $fuente-detalles
+					text-align: center
+					color: $blanco
+					text-shadow: 2px 2px 5px rgba($negro,.5)
+				.about-la-excerpt
+					max-width: 70%
+					text-align: center
+					position: relative
+					margin: 0 auto
+					p
+						color: $blanco
+						font-size: 16px
+			.about-la-img-wrrp
+				text-align: center
+				img
+					display: inline-block
+		.about-trophy
+			background: url('img/bkg_estadio2.jpg') top center no-repeat
+			background-attachment: fixed
+			background-size: cover
+			padding: 100px 0 50px
+			position: relative
+			text-align: center
+			.about-trophy-content
+				padding: 0 0 0 15%
+				.about-trophy-title
+					display: block
+					position: relative
+					font-size: 9em
+					font-family: $fuente-detalles
+					text-align: left
+					line-height: .9
+					&:after
+						content: " "
+						position: absolute
+						width: 20%
+						height: 5px
+						background: $c_detalle
+						top: 100%
+						left: 0
+				.about-trophy-excerpt
+					text-align: justify
+					margin-top: 30px
+					p 
+						font-size: 16px
+			.trophy-img-wrrp
+				text-align: center
+				img
+					display: inline-block
+		.news-pla
+			background: $gris_o
+			padding: 100px 0
+			text-align: center
+			.news-col
+				margin-bottom: 30px
+				.new-meta
+					text-align: left
+					.new-title
+						font-size: 1.5em
+						color: $blanco
+						line-height: 1.2
+					.new-date
+						color: #9b7659
+						font-weight: 700
+						display: block
+						margin-top: 5px
+		.contacto
+			background: url('img/bkg_logo.jpg') top right no-repeat
+			padding: 45px 0 50px
+			text-align: center
+			.contact-exceprt
+				margin-bottom: 30px
+				font-size: 16px
+
+
+		

@@ -1,0 +1,124 @@
++mediaqueriesmw(screen, 400px)
+	#body-wrapp
+		#content-wrapp
+			.intro
+				.intro-winner
+					top: 25%
+					h2
+						letter-spacing: 15px
+						margin: 20px 0 0
+					h1
+						font-size: 8em
+					h3
+						margin: -40px 0 0
+						text-align: left
+						font-size: 5em
+				.intro-jugador
+					z-index: -1
+					margin: 180px auto 0
+				.nombre-jugador
+					margin: -80px auto 0
+					position: relative
+					z-index: 99
+					font-size: 2em
+				#play-trigg
+					position: absolute
+					top: 45%
+					left: 5%
+			//Seccion de Carrusel
+			.section-carousel
+				+transform(translate(0, -120px))
+			.heading-block
+				.title-block
+					font-size: 3em
+					&:after
+						top: 100%
+			//Acerca de
+			.about-la
+				margin-top: 0
+				.about-la-content
+					width: 97%
+					.about-la-title
+						font-size: 4.2em
+						line-height: 1
+					.about-la-excerpt
+						max-width: 95%
+			.about-trophy
+				.about-trophy-content
+					padding: 0
+					.about-trophy-title
+						font-size: 5em
+					.about-trophy-excerpt
+						margin-bottom: 30px
+			//Contacto
+			.contacto
+				background: url('img/bkg_logo.jpg') top center no-repeat
+				.contact-exceprt
+					font-weight: 700
++mediaqueriesmw(screen, 350px)
+	#body-wrapp
+		#content-wrapp
+			.intro
+				.intro-winner
+					top: 25%
+					h2
+						letter-spacing: 15px
+						margin: 20px 0 0
+						font-size: 2.2em
+					h1
+						font-size: 8em
+					h3
+						margin: -40px 0 0
+						text-align: left
+						font-size: 5em
+				.intro-jugador
+					z-index: -1
+					margin: 180px auto 0
+				.nombre-jugador
+					margin: -70px auto 0
+					position: relative
+					z-index: 99
+					font-size: 1.5em
+				#play-trigg
+					position: absolute
+					top: 50%
+					left: 5%
+			//Seccion de Carrusel
+			.section-carousel
+				+transform(translate(0, -80px))
+			.heading-block
+				.title-block
+					font-size: 3em
+			//Acerca de
+			.about-la
+				margin-top: 0
+				.about-la-content
+					width: 97%
+					.about-la-title
+						font-size: 3.8em
+						line-height: 1
+					.about-la-excerpt
+						max-width: 95%
+			.about-trophy
+				.about-trophy-content
+					padding: 0
+					.about-trophy-title
+						font-size: 5em
+					.about-trophy-excerpt
+						margin-bottom: 30px
+			//Contacto
+			.contacto
+				background: url('img/bkg_logo.jpg') top center no-repeat
+				.contact-exceprt
+					font-weight: 700
++mediaqueries(screen, 375px, 812px, portrait) // visual en sm
+	#body-wrapp
+		#content-wrapp
+			.intro
+				.intro-winner
+					top: 18%
+				#play-trigg
+					top: 35%
+			//Seccion de Carrusel
+			.section-carousel
+				+transform(translate(0, -285px))

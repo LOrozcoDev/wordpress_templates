@@ -1,0 +1,55 @@
+#body-wrapp
+	#header-wrapp
+		box-shadow: 0 0 10px rgba(0,0,0,.5)
+		overflow: hidden
+		.logo
+			padding: 5px 0 0
+			> div
+				padding: 0
+			.logo-img
+				width: 53px
+				height: 70px
+				background: url('img/logo_header.png') top center
+				margin: 0 auto 0
+			.logo-text
+				font-family: $fuente-detalles
+				color: $negro
+				text-align: center
+				position: absolute
+				width: 100%
+				top: 50%
+				left: 42%
+				+transform(translate(-50%,-50%))
+				.top-title
+					font-size: 30px
+					margin-bottom: 0
+					line-height: 1
+					span
+						color: $c_detalle
+				.bottom-title
+					font-size: 15px
+					margin-bottom: 0
+					letter-spacing: 5px
+					line-height: 1
+		.menu_rrss
+			position: relative
+			display: inline-block
+			.rs_icon
+				position: relative
+				display: block
+				width: 30px
+				height: 30px
+				color: $c_detalle
+			.instagram
+				&:before
+					content: "\f16d"
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					font-family: $fuente-iconos
+					font-size: 30px
+/*menu*/
+@import _menu
+/*menu*/

@@ -18,5 +18,10 @@
         "name": "Sokkergroup_2018",
         "url": "projects/Sokkergroup_2018/index.html",
         "thumbnail": "projects/Sokkergroup_2018/thumbnail.jpg"
+    },
+    {
+        "name": "pla",
+        "url": "projects/pla/index.html",
+        "thumbnail": "projects/pla/thumbnail.jpg"
     }
 ]
